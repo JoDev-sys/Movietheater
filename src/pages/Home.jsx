@@ -32,8 +32,8 @@ function Home() {
       <div className="movies-grid">
         {movies.map(
           (movie) => (
-            movie.title.toLowerCase().startsWith(searchQuery) && (
-              <MovieCard movie={movie} key={movie.id} />
+            (
+              <MovieCard movie={movie} key={movie.id} /> // remove the last line cause will be using an API to fetch movies and the id will be unique and will be used as key
             )
           )
         )}
